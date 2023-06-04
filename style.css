@@ -87,12 +87,13 @@ button{
     margin: 0.5rem auto;
     background-color: #fff;
     display: grid;
+    gap: 0;
 }  
 
 .item{
     border: solid 0.2px indigo;
     background-color: #fff;
-
+    margin: 0;
 }
 
 @media (min-width: 700px){
