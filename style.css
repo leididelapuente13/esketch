@@ -1,0 +1,118 @@
+/**body{
+    background-color: #202020;
+    color: #4b0082;
+}
+
+header{
+    
+}**/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background-color: #202020;
+}
+
+.header{
+    width: 100%;
+    padding: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 0.9rem;
+    background-color: indigo;
+    color: #fff;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding-bottom: 1.5rem;
+    background-color: #181818;
+}
+
+.opciones{
+    color: #fff;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+label{
+    font-weight: 600;
+}
+
+input[type = "color"]{
+   background-color: inherit;
+   border: none;
+   height: 2rem;
+}
+
+button{
+    padding: 0.6rem;
+    border-radius: 0.2rem;
+    font-weight: 600;
+    border: solid indigo 1px;
+    background-color: inherit;
+    color: #fff;
+}
+
+.opciones__btn-rainbow{
+    background: linear-gradient(35deg,red, #fca607, rgba(255, 255, 108, 0.918), green, blue, indigo, violet, red);
+    border: none;
+}
+
+.container__container{
+    width: 85%;
+    height: 55vh;
+    margin: 3rem 2rem;
+    padding: 0.5rem;
+    background-color: #202020;
+}
+
+.container{
+    border: solid 1.5px indigo;
+    width: 90%;
+    height: 50vh;
+    margin: 0.5rem auto;
+    background-color: #fff;
+    display: grid;
+}  
+
+.item{
+    border: solid 0.2px indigo;
+    background-color: #fff;
+
+}
+
+@media (min-width: 700px){
+   main{
+    flex-direction: row;
+    margin: 4rem auto;
+    height: 85vh;
+    
+   }
+
+   .opciones{
+    width: 30%;
+    height: 70vh;
+   }
+
+   .container__container{
+    height: 75vh;
+   }
+
+   .container{
+    height: 70vh;
+   }
+}
