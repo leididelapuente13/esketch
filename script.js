@@ -1,4 +1,3 @@
-let bgColorContainer = document.querySelector(".opciones__bg-color");
 let gridColor = document.querySelector(".opciones__mause-color");
 let btnRainbow = document.querySelector(".opciones__btn-rainbow");
 let btnEraser = document.querySelector(".opciones__eraser");
