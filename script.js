@@ -94,6 +94,33 @@ function removeBorder(){
     });
 }
 
+function rainbowMode(){
+    const arrayColor = ["red", "blue", "purple", "green", "pink", "orange", "yellow", "grey", "indigo", "darkorange", "darkred"];
+    let gridItems = document.querySelectorAll(".item");
+    let isMouseDown = false;
+
+    gridItems.forEach((grid) => {
+        grid.addEventListener("click", () => {
+            grid.style.backgroundColor = arrayColor[Math.floor(Math.random() * arrayColor.length)];
+        });
+
+        grid.addEventListener("mousedown", () => {
+            grid.style.backgroundColor = arrayColor[Math.floor(Math.random() * arrayColor.length)];
+            isMouseDown = true;
+        });
+
+        grid.addEventListener("mouseup", () => {
+            isMouseDown = false;
+        });
+
+        grid.addEventListener("mouseover", () => {
+            if (isMouseDown) {
+                grid.style.backgroundColor = arrayColor[Math.floor(Math.random() * arrayColor.length)];
+            }
+        });
+    });
+}
+
 tamGrid.addEventListener('input', () => {
     const tam = tamGrid.value;
     showTam.textContent = `${tam} x ${tam}`;
@@ -110,3 +137,4 @@ btnEraser.addEventListener("click", eraser);
 
 btnBorder.addEventListener("click", removeBorder);
 
+btnRainbow.addEventListener("click", rainbowMode);
